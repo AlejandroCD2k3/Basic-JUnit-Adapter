@@ -2,18 +2,17 @@ package com.mycompany.calculadoralegacy;
 
 public class CalculadoraAdapter implements Calculadora{
     
-    private final SistemaAntiguo sistemaAntiguo;
+    private final SistemaExterno sistemaExterno;
     
-    public CalculadoraAdapter(SistemaAntiguo sistemaAntiguo){
-        this.sistemaAntiguo = sistemaAntiguo;
+    public CalculadoraAdapter(SistemaExterno sistemaExterno){
+        this.sistemaExterno = sistemaExterno;
     }
     
     @Override
     public int sumar(int a, int b){
-        double resultado = sistemaAntiguo.sumar(a, b);
+        double resultado = sistemaExterno.sumar(a, b);
         
         return (int) resultado;
     }
 }
-
 
